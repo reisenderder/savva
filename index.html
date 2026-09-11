@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n="meta.title">Savva — Specialty Coffee &amp; Matcha</title>
+<meta name="description" data-i18n-attr="content|meta.description" content="Savva: specialty coffee, matcha whisked to order and cold-brewed hibiscus. Forty items on one menu.">
+<meta name="theme-color" content="#6E8758">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Cormorant+Garamond:wght@300;400;500;600&family=IBM+Plex+Sans+Arabic:wght@200;300;400;500&family=Jost:wght@200;300;400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+</head>
+<body class="is-loading">
+
+<!-- Библиотека фигур. Логотип и иконки лежат здесь один раз и вставляются
+     по ссылке через <use>, чтобы не дублировать контуры по всей странице. -->
+<svg class="svg-sprite" aria-hidden="true" focusable="false">
+  <symbol id="brand-logo" viewBox="0 0 344.2 291.9">
+    <g transform="matrix(1 0 0 -1 -81.7 1516.7)">
+      <path class="brand-logo__ar" pathLength="1" d="M254.5 1378.9 L242.4 1378.9 C239.1 1378.9 236.7 1380.2 236.7 1383.8 L236.7 1483 L220.8 1474 C217.2 1471.7 215.1 1468.5 215.1 1464.1 L215.1 1394.6 C215.1 1387.3 218 1381.5 223.7 1376.9 C229.1 1372.5 235.3 1370.1 242.4 1370.1 L254.5 1370.1 L260.7 1370.1 C265.4 1370.1 270 1371 274.3 1373 C278.5 1374.9 282.3 1377.4 285.6 1380.7 C288.7 1383.8 291.2 1387.5 293.1 1391.6 L293.7 1392.8 L294.7 1391.9 C310.2 1377.9 328.4 1370.7 349.2 1369.9 L349.3 1369.9 C357 1369.9 363.9 1372.3 370 1377 L370.7 1377.5 L371.8 1376.6 C374.4 1374.6 377.4 1372.9 380.6 1371.8 C383.8 1370.7 387.1 1370.1 390.4 1370.1 C395.1 1370.1 399.7 1371 404.1 1372.9 C408.3 1374.7 412.1 1377.3 415.3 1380.6 C418.5 1383.8 421.1 1387.7 422.9 1391.8 C424.8 1396.1 425.8 1400.6 425.9 1405.2 L425.9 1451.5 L410 1442.5 C406.4 1440.2 404.3 1437 404.3 1432.7 L404.3 1392.5 C404.3 1388.7 402.9 1385.5 400.2 1382.8 C397.5 1380.2 394.2 1378.8 390.4 1378.8 C387.2 1378.8 384.8 1380 384.8 1383.5 L384.8 1442.3 L368.8 1433.2 C365.2 1431 363.2 1427.8 363.2 1423.5 L363.2 1392.8 C363.2 1389 361.8 1385.8 359 1383.1 C356.3 1380.5 353.1 1379.1 349.2 1379.1 C337.3 1379.1 326.5 1382.8 317 1390.1 C310.5 1395 305.5 1401.4 301.9 1408.7 C297.9 1416.4 296.2 1421.3 296.2 1430.1 L296.2 1451.5 L280.2 1442.5 L280.2 1442.5 C276.7 1440.2 274.6 1437 274.6 1432.7 L274.6 1392.6 C274.6 1388.8 273.2 1385.6 270.5 1382.9 C267.7 1380.2 264.5 1378.9 260.7 1378.9 Z M169 1508.3 C169 1506 168.2 1504 166.6 1502.3 C165 1500.7 163 1499.9 160.7 1499.9 C158.3 1499.9 156.4 1500.7 154.7 1502.3 C153.1 1504 152.3 1506 152.3 1508.3 C152.3 1510.6 153.1 1512.6 154.7 1514.2 C156.4 1515.8 158.3 1516.7 160.7 1516.7 C163 1516.7 165 1515.8 166.6 1514.2 C168.2 1512.6 169 1510.6 169 1508.3 M179.1 1491.5 C179.1 1489.2 178.2 1487.2 176.6 1485.6 C175 1484 173 1483.2 170.7 1483.2 C168.3 1483.2 166.4 1484 164.7 1485.6 C163.1 1487.2 162.3 1489.2 162.3 1491.5 C162.3 1493.9 163.1 1495.8 164.7 1497.5 C166.4 1499.1 168.3 1499.9 170.7 1499.9 C173 1499.9 175 1499.1 176.6 1497.5 C178.2 1495.8 179.1 1493.9 179.1 1491.5 M159 1491.5 C159 1489.2 158.2 1487.2 156.6 1485.6 C155 1484 153 1483.2 150.7 1483.2 C148.3 1483.2 146.3 1484 144.7 1485.6 C143.1 1487.2 142.3 1489.2 142.3 1491.5 C142.3 1493.9 143.1 1495.8 144.7 1497.5 C146.3 1499.1 148.3 1499.9 150.7 1499.9 C153 1499.9 155 1499.1 156.6 1497.5 C158.2 1495.8 159 1493.9 159 1491.5 M103.3 1483 L87.4 1474 C83.8 1471.7 81.7 1468.5 81.7 1464.1 L81.7 1394.6 C81.7 1387.3 84.6 1381.5 90.2 1376.9 C95.7 1372.5 101.9 1370.1 109 1370.1 L158.4 1370.1 C168.2 1370.1 176.4 1373.6 183.3 1380.5 C190.2 1387.4 193.7 1395.6 193.7 1405.4 L193.7 1483.4 C189.9 1483.2 187.1 1481.6 184 1479.2 C181.6 1477.3 178.9 1474.5 175.7 1474.5 C174.9 1474.5 174.2 1474.6 173.5 1474.8 L173.5 1474.5 L172.1 1475.2 C167.7 1477 163.1 1477.8 158.4 1477.8 C153.7 1477.8 149.1 1476.9 144.8 1474.9 C140.6 1473 136.8 1470.5 133.5 1467.2 C130.3 1464 127.7 1460.2 125.8 1456.1 C123.8 1451.7 122.9 1447.1 122.9 1442.3 L122.9 1408.9 C123 1404.2 123.9 1399.7 125.9 1395.4 C126.5 1393.9 127.3 1392.5 128.1 1391.2 C128.8 1390 129.4 1388.8 130.1 1387.7 C130.6 1386.7 131 1385.7 131 1384.6 C131 1383.6 130.6 1382.6 130.1 1381.8 C129.3 1380.3 128 1379.3 126.4 1378.9 L126.2 1378.9 L109 1378.9 C105.7 1378.9 103.4 1380.2 103.4 1383.8 Z M144.3 1426.7 L144.3 1454.1 C144.3 1458 145.7 1461.3 148.4 1464 C151.2 1466.7 154.5 1468 158.4 1468 C162.2 1468 165.5 1466.6 168.2 1464 C171 1461.3 172.3 1458 172.3 1454.1 L172.3 1426.7 L172.3 1399.4 C172.3 1395.5 170.9 1392.3 168.2 1389.6 C165.4 1386.8 162.1 1385.5 158.2 1385.5 L158.2 1385.5 C154.4 1385.6 151.2 1387 148.4 1389.7 C145.7 1392.3 144.3 1395.6 144.3 1399.4 Z"/>
+      <path class="brand-logo__en" pathLength="1" d="M113.5 1235.7 C134.1 1235.7 148.1 1250.5 148.1 1266.2 C148.1 1282.9 131.2 1291 112.9 1295.7 C95.8 1300.1 89.3 1304.7 89.3 1307.9 C89.3 1310.6 93.8 1312.4 100.2 1312.4 C111.4 1312.4 128.7 1306.9 138.6 1291.2 C145.1 1296.2 147.7 1301.6 147.7 1306.5 C147.7 1318 133.8 1327.7 119.8 1328.5 C119 1328.6 118.1 1328.6 117.3 1328.6 C97.4 1328.6 81.7 1315.2 81.7 1301.9 C81.7 1294.8 86.3 1287.5 97.1 1282.5 C104.6 1279 114.3 1275.6 122.2 1271.3 C130.5 1266.9 133.6 1261 133.6 1255.8 C133.6 1248 126.9 1241.3 120 1241.3 C112.9 1241.3 105.6 1249.8 105.6 1261.5 C105.6 1265.4 106.5 1269.5 108.5 1273.6 C105.7 1275.1 102.8 1275.7 100.1 1275.7 C91 1275.7 83.1 1268.4 83.1 1258.8 C83.1 1255.8 84 1252.5 85.9 1249 C91 1239.6 103 1235.7 113.5 1235.7 M350 1224.8 C360 1224.8 372 1234.3 372 1252.3 C372 1254.8 371.8 1257.5 371.3 1260.3 C370.9 1262.7 370.4 1265.3 369.9 1268.1 C376.5 1260.7 384.7 1259.8 390.7 1246 C393 1240.8 397.4 1237.9 404.7 1237.9 L414.5 1237.9 C405.3 1261.8 404.6 1300.3 398.4 1313.4 C394.5 1321.7 386.3 1323 371 1323 C372.9 1321.8 374.6 1318.4 376.3 1313.6 C359.1 1296.5 357.2 1231.4 338.7 1231.4 C341 1226.9 345.3 1224.8 350 1224.8 M386.9 1260.4 C379.4 1267 368.7 1269 368.7 1281.8 C368.8 1290.9 370.8 1300.6 377.6 1309.2 C381.9 1294 385.1 1270.8 386.9 1260.4 M317.6 1231.2 C325.2 1231.2 333.5 1238.5 338 1248.8 C345.8 1267.2 352.8 1295.6 352.8 1306.7 C352.8 1318.7 343.5 1324.5 335.1 1324.5 C329.7 1324.5 324.4 1322 321.4 1317 C322.6 1317.5 323.7 1317.8 324.6 1317.8 C332.6 1317.8 334.5 1302.2 335.7 1295.5 C336.3 1291.6 336.7 1286.6 336.7 1281.1 C336.7 1270.7 335.5 1258.9 333.7 1251.2 C332.3 1245.2 330.7 1243 329.2 1243 C326.7 1243 324.3 1248.9 322.8 1253.7 C317.8 1270.4 316.8 1280.8 312.9 1296.8 C307.9 1317 300.4 1315.8 283.7 1316.1 C290.4 1302.6 299.5 1272.3 301.4 1255.9 C303.5 1238 310.2 1231.2 317.6 1231.2 M242.8 1231.2 C250.3 1231.2 258.6 1238.5 263.1 1248.8 C270.9 1267.2 277.9 1295.6 277.9 1306.7 C277.9 1318.7 268.6 1324.5 260.3 1324.5 C254.8 1324.5 249.5 1322 246.6 1317 C247.7 1317.5 248.8 1317.8 249.8 1317.8 C257.7 1317.8 259.6 1302.2 260.8 1295.5 C261.4 1291.6 261.8 1286.6 261.8 1281.1 C261.8 1270.7 260.6 1258.9 258.8 1251.2 C257.4 1245.2 255.8 1243 254.3 1243 C251.8 1243 249.4 1248.9 247.9 1253.7 C242.9 1270.4 241.9 1280.8 238 1296.8 C233 1317 225.5 1315.8 208.8 1316.1 C215.6 1302.6 224.6 1272.3 226.5 1255.9 C228.6 1238 235.3 1231.2 242.8 1231.2 M151.6 1224.8 C161.6 1224.8 173.6 1234.3 173.6 1252.3 C173.6 1254.8 173.3 1257.5 172.9 1260.3 C172.5 1262.7 172 1265.3 171.5 1268.1 C178.1 1260.7 186.3 1259.8 192.3 1246 C194.6 1240.8 199 1237.9 206.3 1237.9 L216.1 1237.9 C206.9 1261.8 206.2 1300.3 200 1313.4 C196.1 1321.7 187.9 1323 172.6 1323 C174.5 1321.8 176.2 1318.4 177.8 1313.6 C160.6 1296.5 158.8 1231.4 140.3 1231.4 C142.6 1226.9 146.8 1224.8 151.6 1224.8 M188.5 1260.4 C181 1267 170.3 1269 170.3 1281.8 C170.4 1290.9 172.3 1300.6 179.2 1309.2 C183.4 1294 186.7 1270.8 188.5 1260.4"/>
+    </g>
+  </symbol>
+  <symbol id="i-whatsapp" viewBox="0 0 24 24">
+    <path d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.4A10 10 0 1 0 12 2Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="M8.6 7.4c.3-.1.6 0 .8.3l.9 1.5c.1.3.1.6-.1.8l-.6.6c-.1.2-.2.4 0 .7.5.9 1.3 1.7 2.2 2.2.3.2.5.1.7 0l.6-.6c.2-.2.5-.2.8-.1l1.5.9c.3.2.4.5.3.8-.3.9-1.2 1.4-2.1 1.3-2.9-.3-5.5-2.9-5.8-5.8-.1-.9.4-1.8 1.3-2.1Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-telegram" viewBox="0 0 24 24">
+    <path d="M21.3 3.6 2.9 10.8c-.7.3-.7 1.2 0 1.4l4.6 1.5 1.8 5.4c.2.6 1 .8 1.4.3l2.5-2.6 4.6 3.4c.5.4 1.2.1 1.4-.5l3-14.4c.1-.7-.5-1.2-1.1-.9Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    <path d="m7.5 13.7 10.8-7.3-8.3 8.6-.2 3.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-instagram" viewBox="0 0 24 24">
+    <rect x="3" y="3" width="18" height="18" rx="5" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <circle cx="12" cy="12" r="4.2" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <circle cx="17.2" cy="6.8" r="1.15" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-snapchat" viewBox="0 0 24 24">
+    <path d="M12 2.8c2.6 0 4.4 1.9 4.4 4.5 0 .8-.1 1.6-.1 2.3.3.2.7.3 1.1.2.5-.1 1 .1 1.1.6.1.4-.1.8-.6 1-.7.3-1.6.6-1.7 1 0 .3.3.8.8 1.4.6.7 1.5 1.4 2.4 1.6.4.1.6.4.5.8-.1.5-.9.9-2.2 1.1-.2 0-.3.2-.4.5-.1.4-.2.8-.6.8-.5 0-1-.2-1.8-.2-1.1 0-1.6.2-2.3.8-.6.5-1.2.8-2.1.8s-1.5-.3-2.1-.8c-.7-.6-1.2-.8-2.3-.8-.8 0-1.3.2-1.8.2-.4 0-.5-.4-.6-.8-.1-.3-.2-.5-.4-.5-1.3-.2-2.1-.6-2.2-1.1-.1-.4.1-.7.5-.8.9-.2 1.8-.9 2.4-1.6.5-.6.8-1.1.8-1.4-.1-.4-1-.7-1.7-1-.5-.2-.7-.6-.6-1 .1-.5.6-.7 1.1-.6.4.1.8 0 1.1-.2 0-.7-.1-1.5-.1-2.3C7.6 4.7 9.4 2.8 12 2.8Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-tiktok" viewBox="0 0 24 24">
+    <path d="M14.2 2.6v11.7a3.6 3.6 0 1 1-3-3.6" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <path d="M14.2 2.6c.4 2.3 2.1 4 4.4 4.3" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+  <symbol id="i-facebook" viewBox="0 0 24 24">
+    <rect x="3" y="3" width="18" height="18" rx="4" fill="none" stroke="currentColor" stroke-width="1.4"/>
+    <path d="M14.8 8.4h-1.3c-.7 0-1 .4-1 1v1.4h2.2l-.3 2.2h-1.9v5.2h-2.2v-5.2H8.6v-2.2h1.7V9.2c0-1.8 1-2.9 2.8-2.9h1.7Z" fill="currentColor"/>
+  </symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24">
+    <path d="M12 21.5c4.2-5 6.3-8.6 6.3-11.2a6.3 6.3 0 1 0-12.6 0c0 2.6 2.1 6.2 6.3 11.2Z" fill="none" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/>
+    <circle cx="12" cy="10.1" r="2.3" fill="none" stroke="currentColor" stroke-width="1.4"/>
+  </symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24">
+    <path d="M12 4v16m0 0 6-6m-6 6-6-6" fill="none" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
+  </symbol>
+</svg>
+
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- Прелоадер: логотип прочерчивается контуром, потом заливается. -->
+<div class="preloader" id="preloader" aria-hidden="true">
+  <svg class="preloader__logo" viewBox="0 0 344.2 291.9"><use href="#brand-logo"></use></svg>
+</div>
+
+<header class="topbar" id="topbar">
+  <div class="topbar__inner page">
+    <a class="topbar__brand" href="#top" aria-label="Savva">
+      <svg class="topbar__logo" viewBox="0 0 344.2 291.9" aria-hidden="true"><use href="#brand-logo"></use></svg>
+    </a>
+
+    <nav class="topbar__nav" id="topnav" aria-label="Sections">
+      <a href="#concept"   data-i18n="nav.concept">Concept</a>
+      <a href="#signature" data-i18n="nav.signature">Signature</a>
+      <a href="#mixer"     data-i18n="nav.mixer">Build</a>
+      <a href="#menu"      data-i18n="nav.menu">Menu</a>
+      <a href="#matcha"    data-i18n="nav.matcha">Matcha</a>
+      <a href="#hibiscus"  data-i18n="nav.hibiscus">Hibiscus</a>
+      <a href="#contact"   data-i18n="nav.contact">Contact</a>
+    </nav>
+
+    <div class="langs" id="langs" role="group" aria-label="Language"></div>
+
+    <button class="burger" id="burger" aria-expanded="false" aria-controls="topnav">
+      <span class="burger__bar"></span>
+      <span class="burger__bar"></span>
+      <span class="visually-hidden" data-i18n="nav.open">Menu</span>
+    </button>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ================= Первый экран ================= -->
+  <section class="hero" id="top">
+    <div class="hero__grid page">
+      <div class="hero__text">
+        <p class="eyebrow hero__eyebrow" data-i18n="hero.eyebrow">Specialty coffee &amp; matcha</p>
+        <h1 class="hero__logo">
+          <span class="visually-hidden">Savva</span>
+          <svg viewBox="0 0 344.2 291.9" aria-hidden="true"><use href="#brand-logo"></use></svg>
+        </h1>
+        <p class="hero__sub" data-i18n="hero.sub">A quiet corner for coffee, matcha and unhurried mornings</p>
+
+        <!-- Напиток часа. Строку собирает js/hour.js по часам Эр-Рияда:
+             время берётся у часов гостя и переводится в пояс кафе, поэтому
+             подсказка верна и для того, кто смотрит страницу из другой
+             страны. До первого расчёта блок скрыт, чтобы на экране не
+             мелькала пустая заготовка. -->
+        <div class="nowbar" id="nowbar" hidden>
+          <p class="nowbar__head">
+            <span class="nowbar__label"></span>
+            <span class="nowbar__time num"></span>
+            <span class="nowbar__slot"></span>
+          </p>
+          <a class="nowbar__drink" href="#menu">
+            <span class="nowbar__pour"></span>
+            <b class="nowbar__name"></b>
+            <span class="nowbar__price num"></span>
+            <span class="nowbar__cta" aria-hidden="true"></span>
+          </a>
+        </div>
+      </div>
+
+      <figure class="hero__figure">
+        <div class="hero__frame" id="heroFrame" role="button" tabindex="0" aria-label="Interactive coffee cup">
+          <img src="assets/img/hero.jpg" width="1200" height="1500" alt="Savva specialty coffee" fetchpriority="high">
+
+          <!-- Интерактивный живой холст: пар над чашкой, волны на кофе и капли эспрессо -->
+          <canvas class="hero__canvas" id="heroCoffeeCanvas" aria-hidden="true"></canvas>
+
+          <!-- Деликатная подсказка интерактива -->
+          <span class="hero__hint" id="heroHint" aria-hidden="true">
+            <svg viewBox="0 0 24 24" width="14" height="14" fill="currentColor">
+              <path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/>
+            </svg>
+            <span data-i18n="hero.hint">Коснитесь кофе</span>
+          </span>
+        </div>
+      </figure>
+    </div>
+
+    <a class="hero__scroll" href="#concept">
+      <span data-i18n="hero.scroll">Scroll</span>
+      <svg aria-hidden="true"><use href="#i-arrow"></use></svg>
+    </a>
+  </section>
+
+  <!-- ================= Концепция ================= -->
+  <section class="section concept" id="concept">
+    <div class="page concept__grid">
+      <div class="concept__text reveal">
+        <p class="eyebrow" data-i18n="concept.eyebrow">Concept</p>
+        <h2 class="display concept__title" data-i18n="concept.title">Two colours, one idea</h2>
+        <p class="lede" data-i18n="concept.body">Sand and sage.</p>
+
+        <dl class="stats">
+          <div class="stats__item">
+            <dt class="num stats__num" data-count="40">40</dt>
+            <dd class="stats__label" data-i18n="concept.stat1">items on the menu</dd>
+          </div>
+          <div class="stats__item">
+            <dt class="num stats__num" data-count="5">5</dt>
+            <dd class="stats__label" data-i18n="concept.stat2">drinks named after the house</dd>
+          </div>
+          <div class="stats__item">
+            <dt class="num stats__num" data-count="5">5</dt>
+            <dd class="stats__label" data-i18n="concept.stat3">drinks built on matcha</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Фирменная линейка ================= -->
+  <section class="section signature" id="signature">
+    <div class="page">
+      <header class="sechead reveal">
+        <p class="eyebrow" data-i18n="signature.eyebrow">Signature</p>
+        <h2 class="display sechead__title" data-i18n="signature.title">Five drinks carry our name</h2>
+        <p class="lede" data-i18n="signature.lede">Our own recipes.</p>
+      </header>
+      <ul class="sig" id="sigGrid"></ul>
+    </div>
+  </section>
+
+  <!-- ================= Конструктор напитка =================
+       Ползунки задают три величины: сколько эспрессо или матчи, сколько
+       молока, сколько льда. Стакан рядом наполняется слоями, а снизу
+       подбирается ближайшая позиция настоящего меню с её ценой и
+       калорийностью из печатного макета. Логика в js/mixer.js. -->
+  <section class="section mixer" id="mixer">
+    <div class="page">
+      <header class="sechead reveal">
+        <p class="eyebrow" data-i18n="mixer.eyebrow">Build your own</p>
+        <h2 class="display sechead__title" data-i18n="mixer.title">A cup built to your taste</h2>
+        <p class="lede" data-i18n="mixer.lede">Move the sliders and watch the glass fill.</p>
+      </header>
+
+      <div class="mixer__grid reveal">
+
+        <!-- Стакан. Слои обрезаются по внутреннему контуру, поэтому
+             жидкость нигде не вылезает за стекло. -->
+        <figure class="mixer__glassbox" id="mxGlassBox">
+          <div class="mixer__liveBadge">
+            <span class="mixer__liveDot"></span>
+            <span data-i18n="mixer.liveTag">Live Customizer</span>
+          </div>
+          <svg class="mixer__glass" viewBox="0 0 200 280" role="img"
+               data-i18n-attr="aria-label|mixer.glass" aria-label="Glass">
+            <defs>
+              <clipPath id="mxInner">
+                <path d="M32 34 L168 34 L154 242 Q153 252 143 252 L57 252 Q47 252 46 242 Z"/>
+              </clipPath>
+              <linearGradient id="mxGradCoffee" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#5E3B27"/>
+                <stop offset="100%" stop-color="#2D190E"/>
+              </linearGradient>
+              <linearGradient id="mxGradMatcha" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7C9666"/>
+                <stop offset="100%" stop-color="#3D502E"/>
+              </linearGradient>
+              <linearGradient id="mxGradMilk" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#FFFDF8"/>
+                <stop offset="100%" stop-color="#F2E6D0"/>
+              </linearGradient>
+              <linearGradient id="mxGradCrema" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#D9C3A5"/>
+                <stop offset="100%" stop-color="#8C6541"/>
+              </linearGradient>
+              <linearGradient id="mxGradMatchaFoam" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#B2C79F"/>
+                <stop offset="100%" stop-color="#6E8758"/>
+              </linearGradient>
+            </defs>
+
+            <!-- Пар для горячих напитков -->
+            <g id="mxSteamGroup" class="mixer__steam">
+              <path class="mixer__steamLine mixer__steamLine--1" d="M85 30 C80 20, 90 12, 85 2" />
+              <path class="mixer__steamLine mixer__steamLine--2" d="M100 32 C93 22, 107 10, 100 -2" />
+              <path class="mixer__steamLine mixer__steamLine--3" d="M115 30 C110 20, 120 12, 115 2" />
+            </g>
+
+            <g clip-path="url(#mxInner)">
+              <rect id="mxBaseFill" x="20" y="252" width="160" height="0"/>
+              <rect id="mxMilkFill" x="20" y="252" width="160" height="0"/>
+              <rect id="mxFoamFill" x="20" y="252" width="160" height="0"/>
+              <!-- Волна на поверхности жидкости -->
+              <path id="mxWave" class="mixer__wavePath" d="M 20 252 Q 60 252, 100 252 T 180 252 L 180 260 L 20 260 Z" />
+              <g id="mxIceBox"></g>
+            </g>
+
+            <!-- Струя наливания при регулировке -->
+            <path id="mxPourStream" class="mixer__pourStream" d="M 100 0 L 100 252" />
+
+            <path class="mixer__outline"
+                  d="M32 34 L168 34 L154 242 Q153 252 143 252 L57 252 Q47 252 46 242 Z"/>
+            <line class="mixer__rim" x1="26" y1="34" x2="174" y2="34"/>
+
+            <!-- Блик стекла -->
+            <path class="mixer__glare" d="M42 40 L50 40 L44 235 L38 235 Z" />
+          </svg>
+        </figure>
+
+        <div class="mixer__panel">
+          <div class="mixer__row">
+            <span class="mixer__label" data-i18n="mixer.base">Base</span>
+            <div class="mixer__seg" id="mxBase" role="group"
+                 data-i18n-attr="aria-label|mixer.base" aria-label="Base">
+              <button type="button" data-base="coffee" aria-pressed="true" data-i18n="mixer.base.coffee">Coffee</button>
+              <button type="button" data-base="matcha" aria-pressed="false" data-i18n="mixer.base.matcha">Matcha</button>
+            </div>
+          </div>
+
+          <label class="mixer__row">
+            <span class="mixer__label" id="mxShotsLabel">Espresso shots</span>
+            <input class="mixer__range" type="range" id="mxShots" min="0" max="3" step="1" value="1">
+            <output class="mixer__val num" id="mxShotsOut">1</output>
+          </label>
+
+          <label class="mixer__row">
+            <span class="mixer__label" data-i18n="mixer.milk">Milk</span>
+            <input class="mixer__range" type="range" id="mxMilk" min="0" max="240" step="20" value="120">
+            <output class="mixer__val num" id="mxMilkOut">120</output>
+          </label>
+
+          <label class="mixer__row">
+            <span class="mixer__label" data-i18n="mixer.ice">Ice</span>
+            <input class="mixer__range" type="range" id="mxIce" min="0" max="6" step="1" value="0">
+            <output class="mixer__val num" id="mxIceOut">0</output>
+          </label>
+
+          <div class="mixer__read" aria-live="polite">
+            <dl class="mixer__facts">
+              <div class="mixer__fact">
+                <dt data-i18n="mixer.strength">Strength</dt>
+                <dd id="mxStrength">Even</dd>
+              </div>
+              <div class="mixer__fact">
+                <dt data-i18n="mixer.kcal">Calories, estimate</dt>
+                <dd class="num" id="mxKcal">80</dd>
+              </div>
+            </dl>
+
+            <a class="mixer__match" id="mxMatch" href="#menu">
+              <span class="mixer__matchLabel" data-i18n="mixer.match">Closest on our menu</span>
+              <b class="mixer__matchName"></b>
+              <span class="mixer__matchMeta num"></span>
+            </a>
+          </div>
+
+          <div class="mixer__foot">
+            <button type="button" class="mixer__reset" id="mxReset" data-i18n="mixer.reset">Reset</button>
+            <p class="mixer__note" data-i18n="mixer.note">Calories here are estimated from the ingredients.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Меню ================= -->
+  <section class="section menu" id="menu">
+    <div class="page">
+      <header class="sechead reveal">
+        <p class="eyebrow" data-i18n="menu.eyebrow">Menu</p>
+        <h2 class="display sechead__title" data-i18n="menu.title">Forty items</h2>
+        <p class="lede" data-i18n="menu.lede">Prices in Saudi riyals.</p>
+      </header>
+
+      <div class="menu__controls">
+        <div class="tabs" id="menuTabs" role="group" aria-label="Menu sections"></div>
+        <label class="switch">
+          <input type="checkbox" id="lightOnly">
+          <span class="switch__track" aria-hidden="true"><span class="switch__knob"></span></span>
+          <span class="switch__label" data-i18n="menu.filter.light">Light, up to 100 kcal</span>
+        </label>
+      </div>
+
+      <div class="menu__body" id="menuBody"></div>
+      <p class="menu__empty" id="menuEmpty" hidden data-i18n="menu.empty">Nothing matches that filter.</p>
+    </div>
+  </section>
+
+  <!-- ================= Матча ================= -->
+  <section class="section wash" id="matcha">
+    <div class="wash__layer" aria-hidden="true"></div>
+    <div class="page wash__grid">
+      <figure class="wash__figure reveal">
+        <img src="assets/img/matcha.jpg" width="1400" height="900" alt="Specialty Matcha Cup" loading="lazy">
+        <!-- Живой дым/пар и анимация теплоты от горячей чашки -->
+        <span class="wash__steamFx" aria-hidden="true">
+          <span class="wash__steamSmoke wash__steamSmoke--1"></span>
+          <span class="wash__steamSmoke wash__steamSmoke--2"></span>
+          <span class="wash__steamSmoke wash__steamSmoke--3"></span>
+          <span class="wash__cupSheen"></span>
+        </span>
+      </figure>
+      <div class="wash__text reveal">
+        <p class="eyebrow" data-i18n="matcha.eyebrow">Matcha</p>
+        <h2 class="display sechead__title" data-i18n="matcha.title">The green half of the menu</h2>
+        <p class="lede" data-i18n="matcha.body">Five of our drinks are built on matcha.</p>
+        <ul class="miniList" id="matchaList"></ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= Каркаде ================= -->
+  <section class="section hibiscus" id="hibiscus">
+    <div class="page wash__grid wash__grid--flip">
+      <div class="wash__text reveal">
+        <p class="eyebrow" data-i18n="hibiscus.eyebrow">Hibiscus</p>
+        <h2 class="display sechead__title" data-i18n="hibiscus.title">Hibiscus, for the heat</h2>
+        <p class="lede" data-i18n="hibiscus.body">Karkade steeped cold.</p>
+        <ul class="miniList" id="hibiscusList"></ul>
+      </div>
+      <figure class="wash__figure reveal">
+        <img src="assets/img/hibiscus.jpg" width="1400" height="900" alt="" loading="lazy">
+      </figure>
+    </div>
+  </section>
+
+  <!-- ================= Контакты ================= -->
+  <section class="section contact" id="contact">
+    <div class="page contact__grid">
+      <div>
+        <p class="eyebrow" data-i18n="contact.eyebrow">Contact</p>
+        <h2 class="display sechead__title" data-i18n="contact.title">Find us</h2>
+
+        <dl class="contact__list reveal">
+          <dt data-i18n="contact.addressLabel">Address</dt>
+          <dd data-i18n="contact.address">King Fahd Road, Al Olaya, Riyadh</dd>
+
+          <dt data-i18n="contact.hoursLabel">Hours</dt>
+          <dd data-i18n="contact.hours">Every day, 07:00 until midnight</dd>
+
+          <dt data-i18n="contact.phoneLabel">Phone</dt>
+          <dd><a class="num contact__phone" href="tel:+966550000000" dir="ltr">+966 55 000 00 00</a></dd>
+        </dl>
+
+        <p class="contact__note" data-i18n="contact.note">Contact details on this page are placeholders.</p>
+      </div>
+
+      <div class="contact__side reveal">
+        <figure class="contact__shot">
+          <img src="assets/img/concept.jpg" width="1400" height="900" alt="" loading="lazy">
+        </figure>
+
+        <p class="eyebrow" data-i18n="contact.followLabel">Follow</p>
+        <ul class="social">
+          <li><a href="#" rel="nofollow"><svg aria-hidden="true"><use href="#i-instagram"></use></svg><span>Instagram</span></a></li>
+          <li><a href="#" rel="nofollow"><svg aria-hidden="true"><use href="#i-snapchat"></use></svg><span>Snapchat</span></a></li>
+          <li><a href="#" rel="nofollow"><svg aria-hidden="true"><use href="#i-tiktok"></use></svg><span>TikTok</span></a></li>
+          <li><a href="#" rel="nofollow"><svg aria-hidden="true"><use href="#i-whatsapp"></use></svg><span>WhatsApp</span></a></li>
+          <li><a href="#" rel="nofollow"><svg aria-hidden="true"><use href="#i-telegram"></use></svg><span>Telegram</span></a></li>
+          <li><a href="#" rel="nofollow"><svg aria-hidden="true"><use href="#i-facebook"></use></svg><span>Facebook</span></a></li>
+        </ul>
+      </div>
+    </div>
+</main>
+
+<!-- Фирменный вращающийся 3D-медальон -->
+<div class="brand-orbit" id="brandOrbit" aria-hidden="true">
+  <div class="brand-orbit__float">
+    <div class="brand-medallion">
+      <span class="brand-medallion__face brand-medallion__face--front">
+        <svg viewBox="0 0 344.2 291.9" aria-hidden="true"><use href="#brand-logo"></use></svg>
+      </span>
+      <span class="brand-medallion__face brand-medallion__face--back">
+        <svg viewBox="0 0 344.2 291.9" aria-hidden="true"><use href="#brand-logo"></use></svg>
+      </span>
+    </div>
+  </div>
+</div>
+
+<!-- Планка с адресом. Появляется, когда первый экран уходит вверх, и
+     прячется у блока контактов: показывать дорогу к тому, на что человек
+     уже смотрит, незачем. -->
+<a class="locbar" id="locbar" href="#contact" data-i18n-attr="aria-label|locbar.aria">
+  <svg class="locbar__pin" aria-hidden="true"><use href="#i-pin"></use></svg>
+  <span class="locbar__text" data-i18n="locbar.label">Riyadh, Al Olaya</span>
+</a>
+
+<!-- Кнопка «Наверх» с плавной прокруткой к началу страницы -->
+<button class="to-top" id="toTop" type="button" data-i18n-attr="aria-label|action.toTop" aria-label="Back to top">
+  <svg class="to-top__icon" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+    <path d="M12 19V5M5 12l7-7 7 7"/>
+  </svg>
+</button>
+
+<footer class="footer">
+  <div class="page footer__inner">
+    <svg class="footer__logo" viewBox="0 0 344.2 291.9" aria-hidden="true"><use href="#brand-logo"></use></svg>
+    <p class="footer__line"><span class="num">&copy; 2026</span> Savva. <span data-i18n="footer.rights">All rights reserved</span>.</p>
+    <p class="footer__line footer__small" data-i18n="footer.demo">A demonstration landing page.</p>
+    <p class="footer__line footer__small" data-i18n="footer.photos">Photography from Unsplash and Pexels</p>
+  </div>
+</footer>
+
+<script src="js/i18n.js"></script>
+<script src="js/menu.js"></script>
+<script src="js/app.js"></script>
+<script src="js/hour.js"></script>
+<script src="js/mixer.js"></script>
+</body>
+</html>

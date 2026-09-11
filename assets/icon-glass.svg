@@ -1,0 +1,11 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 72 96" fill="none" stroke="#6E8758" stroke-width="2.1" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Высокий стакан со льдом. Нарисован в той же манере, что и предметная
+       графика печатного макета: только контур, без заливок. -->
+  <path d="M17 14h38l-4.5 72a5 5 0 0 1-5 4.6H26.5a5 5 0 0 1-5-4.6Z"/>
+  <path d="M18.6 36h34.8"/>
+  <path d="M27 47.5h14.5v13H27z" transform="rotate(-14 34.2 54)"/>
+  <path d="M35 64.5h13v12H35z" transform="rotate(11 41.5 70.5)"/>
+  <path d="M24.5 70h10.5v9.5H24.5z" transform="rotate(-7 29.7 74.7)"/>
+  <path d="M47 4v18"/>
+  <path d="M47 4c5.4 1.2 9 5.4 9.4 10.6"/>
+</svg>
