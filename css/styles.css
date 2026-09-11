@@ -976,13 +976,26 @@ body.is-ready .hero__sub { animation-delay: 520ms; }
    Стакан слева, ползунки справа. Слои внутри стакана обрезаны по его
    внутреннему контуру прямо в разметке, поэтому здесь только цвета. */
 
-.mixer { background: var(--sand-50); }
+.mixer {
+  background: var(--sand-50);
+  padding-block: clamp(2rem, 3.5vh, 3.5rem);
+}
+.mixer .sechead {
+  margin-block-end: clamp(1rem, 2vh, 1.5rem);
+}
+.mixer .sechead__title {
+  margin-block: var(--s-1) var(--s-2);
+  font-size: clamp(1.85rem, 2.5vw, 2.4rem);
+}
+.mixer .sechead .lede {
+  margin-block-start: var(--s-1);
+}
 
 .mixer__grid {
   display: grid;
   grid-template-columns: minmax(0, 0.62fr) minmax(0, 1fr);
   align-items: center;
-  gap: clamp(var(--s-5), 5vw, var(--s-8));
+  gap: clamp(var(--s-4), 4vw, var(--s-7));
 }
 
 .mixer__glassbox {
@@ -991,7 +1004,7 @@ body.is-ready .hero__sub { animation-delay: 520ms; }
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: var(--s-6) var(--s-5) var(--s-5);
+  padding: var(--s-4) var(--s-4) var(--s-3);
   background: radial-gradient(circle at 50% 30%, #F8F3E9, var(--sand-150));
   border: 1px solid var(--line);
   box-shadow: inset 0 0 30px rgba(110, 135, 88, 0.05);
@@ -1035,10 +1048,10 @@ body.is-ready .hero__sub { animation-delay: 520ms; }
 }
 
 .mixer__glass {
-  width: min(100%, 15rem);
+  width: min(100%, 11.5rem);
   height: auto;
   overflow: visible;
-  filter: drop-shadow(0 12px 24px rgba(45, 30, 20, 0.08));
+  filter: drop-shadow(0 10px 20px rgba(45, 30, 20, 0.08));
 }
 
 #mxBaseFill, #mxMilkFill, #mxFoamFill {
@@ -1134,13 +1147,13 @@ body.is-ready .hero__sub { animation-delay: 520ms; }
   stroke-linecap: round;
 }
 
-.mixer__panel { display: flex; flex-direction: column; gap: var(--s-4); }
+.mixer__panel { display: flex; flex-direction: column; gap: clamp(var(--s-2), 1.5vh, var(--s-3)); }
 
 .mixer__row {
   display: grid;
-  grid-template-columns: 10rem minmax(0, 1fr) 4.5rem;
+  grid-template-columns: 9.5rem minmax(0, 1fr) 4rem;
   align-items: center;
-  gap: var(--s-4);
+  gap: var(--s-3);
 }
 .mixer__label {
   font-size: var(--t-xs);
@@ -1219,11 +1232,11 @@ body.is-ready .hero__sub { animation-delay: 520ms; }
 .mixer__seg button[aria-pressed="true"] { background: var(--sage-600); color: var(--sand-50); }
 
 .mixer__read {
-  margin-block-start: var(--s-3);
-  padding-block-start: var(--s-4);
+  margin-block-start: var(--s-2);
+  padding-block-start: var(--s-2);
   border-block-start: 1px solid var(--line);
 }
-.mixer__facts { display: flex; flex-wrap: wrap; gap: var(--s-6); }
+.mixer__facts { display: flex; flex-wrap: wrap; gap: var(--s-5); }
 .mixer__fact dt {
   font-size: var(--t-xs);
   letter-spacing: var(--track-mid);
@@ -1241,9 +1254,9 @@ body.is-ready .hero__sub { animation-delay: 520ms; }
   display: flex;
   align-items: baseline;
   flex-wrap: wrap;
-  gap: var(--s-2) var(--s-3);
-  margin-block-start: var(--s-4);
-  padding: var(--s-4);
+  gap: var(--s-1) var(--s-3);
+  margin-block-start: var(--s-2);
+  padding: var(--s-3);
   background: var(--sand-100);
   border-inline-start: 2px solid var(--sage-500);
   transition: background var(--dur-fast);
@@ -1563,19 +1576,58 @@ body.is-ready .hero__sub { animation-delay: 520ms; }
     transform: none;
   }
 
-  /* Конструктор на узком экране складывается в одну колонку: стакан
-     сверху, ползунки под ним. Подпись уходит на свою строку, иначе на
-     сам ползунок остаётся полоска в два сантиметра. */
-  .mixer__grid { grid-template-columns: 1fr; }
-  .mixer__glass { width: min(100%, 11rem); }
-  .mixer__glassbox { padding: var(--s-4); }
-  .mixer__row {
-    grid-template-columns: minmax(0, 1fr) 3.5rem;
-    gap: var(--s-2) var(--s-3);
+  /* Конструктор на узком экране: компактный стакан сверху, ползунки
+     под ним. Подпись и значение на верхней строке, сам ползунок во всю
+     ширину с удобным пальцевым хватом. */
+  .mixer { padding-block: clamp(2rem, 4.5vh, 2.75rem); }
+  .mixer .sechead { margin-block-end: var(--s-3); }
+  .mixer .sechead__title { margin-block: var(--s-1); font-size: clamp(1.65rem, 5.5vw, 2.1rem); }
+  .mixer .sechead .lede { margin-block-start: 2px; }
+  .mixer__grid { grid-template-columns: 1fr; gap: var(--s-3); }
+  .mixer__glassbox {
+    padding: var(--s-2) var(--s-3);
+    border-radius: var(--radius-lg);
   }
-  .mixer__label { grid-column: 1 / -1; }
-  .mixer__seg { width: 100%; justify-self: stretch; }
-  .mixer__seg button { flex: 1 1 0; }
+  .mixer__liveBadge {
+    inset-block-start: var(--s-2);
+    inset-inline-start: var(--s-2);
+    padding: 2px 8px;
+    font-size: 0.68rem;
+  }
+  .mixer__glass { width: 7.25rem; }
+  .mixer__panel { gap: var(--s-2); }
+  .mixer__row {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 3px var(--s-3);
+  }
+  .mixer__label { grid-column: 1; margin: 0; }
+  .mixer__val { grid-column: 2; text-align: end; }
+  .mixer__range {
+    grid-column: 1 / -1;
+    height: 8px;
+    margin-block: 4px;
+  }
+  .mixer__range::-webkit-slider-thumb {
+    width: 24px;
+    height: 24px;
+  }
+  .mixer__range::-moz-range-thumb {
+    width: 24px;
+    height: 24px;
+  }
+  .mixer__seg { width: 100%; justify-self: stretch; margin-block-start: 2px; }
+  .mixer__seg button { flex: 1 1 0; padding-block: 7px; }
+  .mixer__read {
+    margin-block-start: var(--s-2);
+    padding-block-start: var(--s-2);
+  }
+  .mixer__facts { gap: var(--s-4); }
+  .mixer__match {
+    margin-block-start: var(--s-2);
+    padding: var(--s-2) var(--s-3);
+  }
 
   .contact__grid { grid-template-columns: 1fr; }
 
